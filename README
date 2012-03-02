@@ -1,0 +1,9 @@
+As part of an assignment for the Scalable Machine Learning course (CS 281B) at the University of California - Berkeley, I'm implementing and comparing three data streaming algorithms:
+1) The Count-Min Sketch Algorithm - Cormode, Graham; S. Muthukrishnan (2004). "An Improved Data Stream Summary: The Count-Min Sketch and its Applications". J. Algorithms 55: 29–38.
+2) An improved (i.e. tighter-bounded) Count-Min Sketch algorithm which only handles inserts (sacrificing removal capabilities).
+3) The SpaceSaving sketch - Efficient Computation of Frequent and Top-k Elements in Data Streams by Ahmed Metwally, Divyakant Agrawal and Amr El Abbadi
+
+While I don't anticipate that this implementation will be better than reference implementations by the original authors, it might come in handy for comparison purposes.
+
+Mark Fuge
+markfuge@gmail.com
