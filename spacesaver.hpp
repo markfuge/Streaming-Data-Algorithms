@@ -6,16 +6,6 @@
 #include <boost/bimap/list_of.hpp>
 #include <boost/bimap/multiset_of.hpp>
 #include <boost/bimap/support/lambda.hpp> 
-//typedef boost::bimap< std::string,int > bm_type;
-
-struct counter {
-    counter() : c(0) {}
-    counter& operator++() { ++c; return *this; }
-    unsigned int operator++(int) { return c++; }
-    operator const unsigned int() const { return c; }
-    private:
-    unsigned int c;
-};
 
 using namespace boost::bimaps;
 typedef bimap
@@ -36,7 +26,6 @@ public:
 
 	void updateBimapWithWord(std::string word);
 	void printWordListByFreq();
-	void outputWordListByFreq();
 
 private:
 	int max_pairs;

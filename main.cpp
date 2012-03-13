@@ -27,7 +27,6 @@ struct InvalidChar
 		else{
 			return !(isalpha(c)||(c == ' '));
 		}
-        //return !isprint((unsigned)c);
     }
 };
 
@@ -78,8 +77,6 @@ void outputCountComparison(deque<std::string> top_words, deque<int> actual_resul
 
 int main()
 {
-	//printf("Hello World");   
-	
 	// Load in dataset
 	std::vector<std::string> filenames;
 	filenames.push_back("enwikiaa");
@@ -156,7 +153,6 @@ int main()
 		filenames.pop_back();
 	}
 	//spacesaver.printWordListByFreq();
-	//countmin.outputCountsOfWordList(top_words);
 	deque<int> countmin_result = countmin.returnCountsOfWordList(top_words);
 	deque<int> insertcountmin_result = insertcountmin.returnCountsOfWordList(top_words);
 	deque<int> actual_result = returnActualCountsOfWordList(top_words,actual_counts);

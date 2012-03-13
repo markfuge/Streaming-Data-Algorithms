@@ -16,13 +16,6 @@
 
 using namespace std;
 
-/*int hashCode(string word)
-{
-    boost::hash<string> string_hash;
-    return string_hash(word);
-}*/
-
-
 class CountMin{
 public:
 	CountMin();		// Initializes the data structures

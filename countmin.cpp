@@ -35,7 +35,6 @@ vector<int> CountMin::returnHashFunctionsOfString(std::string word){
 	// First we hash the string to generate seeds for a random number generator
 	boost::hash<std::string> string_hash;
 	boost::mt19937 randGen(string_hash(word));
-	//boost::mt19937 seed(boost::hash<std::string> string_hash(word));
 	boost::uniform_int<> numrange(0, NUM_BINS-1);
 	boost::variate_generator< boost::mt19937&, boost::uniform_int<> > GetRand(randGen, numrange);
 	vector<int> hashes;
@@ -83,7 +82,6 @@ void InsertCountMin::updateSketchWithWord(std::string word){
 	vector<int> hashes = returnHashFunctionsOfString(word);
 	int mincount = queryCountOfString(word);
 	for(int i =0;i<hashes.size();i++){
-		//printf("%s=>H%d:%d\n",word.c_str(),i,hashes.at(i));
 		if(table[i][hashes.at(i)]< mincount+1){
 			table[i][hashes.at(i)]+=1;
 		}
